@@ -1,7 +1,7 @@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TabsContent } from "@radix-ui/react-tabs";
 import { List, PersonStanding, Search } from "lucide-react";
-import DisplayMovie from "~/pages/singleMovie";
+import { DisplayMovie } from "~/pages/singleMovie";
 
 export default function Home() {
   return (

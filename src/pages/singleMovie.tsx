@@ -8,9 +8,6 @@ type Providers = "Netflix" | "Hulu" | "Amazon Prime" | "HBO Max" | "Disney+";
 //     ""
 // }
 
-const RottenTomatoes =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png";
-
 type Movie = {
   coverImage: string;
   title: string;
@@ -22,7 +19,9 @@ type Movie = {
   movieScore: number;
 };
 
-export default function DisplayMovie({ movie }: { movie: Movie }) {
+export function DisplayMovie({ movie }: { movie: Movie }) {
+  const RottenTomatoes =
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/757px-Rotten_Tomatoes.svg.png";
   return (
     <div className="flex w-full flex-col items-center space-y-4 bg-background p-8">
       <Image
