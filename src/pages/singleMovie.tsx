@@ -14,7 +14,6 @@ type Movie = {
   description: string;
   rottenTomatoes: number;
   imdb: number;
-  streamingOn: Providers[];
   friendScore: number;
   movieScore: number;
 };

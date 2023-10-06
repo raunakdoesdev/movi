@@ -4,26 +4,24 @@ import { List, PersonStanding, Search } from "lucide-react";
 import { DisplayMovie } from "~/pages/singleMovie";
 
 export default function Home() {
+  const movie = {
+    coverImage:
+      "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+    title: "The Dark Knight",
+    description:
+      "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    rottenTomatoes: 94,
+    imdb: 9,
+    friendScore: 7.4,
+    movieScore: 8.2,
+  };
   return (
     <Tabs
       defaultValue="list"
       className="flex h-screen  w-screen flex-col justify-between space-y-2"
     >
       <TabsContent className="grow overflow-y-auto" value="list">
-        <DisplayMovie
-          movie={{
-            coverImage:
-              "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
-            title: "The Dark Knight",
-            description:
-              "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-            rottenTomatoes: 94,
-            imdb: 9,
-            streamingOn: ["Netflix"],
-            friendScore: 7.4,
-            movieScore: 8.2,
-          }}
-        />
+        <DisplayMovie movie={movie} />
       </TabsContent>
       <TabsContent className="h-full grow" value="search">
         This is your account
